@@ -1,17 +1,20 @@
 <?php
 require("inc/verificarSession.php");
 require_once("../clases/Novedad.php");
+
 $nov = new Novedad();
 
-?>
 
+?>  
 <?php require("inc/head.php") ?>
+
 <body>
 <?php require("inc/header.php") ?>
 	<div class="row">
 		<div class="container text-center" style="margin-top:5%;">
-<?php 
-$nov->insertarNovedad($_POST['titulo'],
+<?php $nov->actualizarNovedad(
+					  $_POST['id'],	
+					  $_POST['titulo'],
 					  $_POST['descripcion'],
 					  $_FILES['imagen1']['name'],
 					  $_FILES['imagen2']['name'],
@@ -23,8 +26,7 @@ $nov->insertarNovedad($_POST['titulo'],
 					  $_FILES['imagen8']['name'],
 					  $_FILES['imagen9']['name'],
 					  $_FILES['imagen10']['name']);
-					   ?>
-
+ ?>
 
 		</div>
 	</div>
@@ -35,3 +37,4 @@ $nov->insertarNovedad($_POST['titulo'],
         </div>  	
 </body>
 </html  
+

@@ -2,7 +2,6 @@
 require_once("BaseDatos.php");
 class Novedad{
 
-	public $baseDatos;
 
 	public function _construct(){
 
@@ -281,7 +280,7 @@ class Novedad{
 	}
 
 
-	public function actualizarAcademica($id,$titulo,$descripcion,$imagen1,$imagen2,$imagen3,$imagen4,$imagen5,$imagen6,$imagen7,$imagen8,$imagen9,$imagen10){
+	public function actualizarNovedad($id,$titulo,$descripcion,$imagen1,$imagen2,$imagen3,$imagen4,$imagen5,$imagen6,$imagen7,$imagen8,$imagen9,$imagen10){
 		$bd=new BaseDatos();
 
 		try{
@@ -417,15 +416,16 @@ class Novedad{
 
 					$fila=$resultado->fetch_assoc();
 
-					//Elimino el archivo fisico
-					unlink("../uploads/".$fila['img1']."");
-
+					if($fila['img1']!=""){
+						//Elimino el archivo fisico
+						unlink("../uploads/".$fila['img1']."");
+					}
 
 
 					//CARGA DE IMAGENES EN CARPETA
 					//carga imagenes Big
 					$target_path="../uploads/";
-					$target_path = $target_path . $imagen;
+					$target_path = $target_path . $imagen1;
 
 					move_uploaded_file($_FILES['imagen1']['tmp_name'], $target_path);
 
@@ -435,7 +435,7 @@ class Novedad{
 													SET img1=(?)
 													WHERE ID=(?)");
 
-					$stmt->bind_param("si",$imagen,$id);
+					$stmt->bind_param("si",$imagen1,$id);
 
 					$stmt->execute();
 
@@ -458,16 +458,16 @@ class Novedad{
 					$resultado=$stmt->get_result();
 
 					$fila=$resultado->fetch_assoc();
-
-					//Elimino el archivo fisico
-					unlink("../uploads/".$fila['img2']."");
-
+					if($fila['img2']!=""){
+						//Elimino el archivo fisico
+						unlink("../uploads/".$fila['img2']."");
+					}
 
 
 					//CARGA DE IMAGENES EN CARPETA
 					//carga imagenes Big
 					$target_path="../uploads/";
-					$target_path = $target_path . $imagen;
+					$target_path = $target_path . $imagen2;
 
 					move_uploaded_file($_FILES['imagen2']['tmp_name'], $target_path);
 
@@ -477,7 +477,7 @@ class Novedad{
 													SET img2=(?)
 													WHERE ID=(?)");
 
-					$stmt->bind_param("si",$imagen,$id);
+					$stmt->bind_param("si",$imagen2,$id);
 
 					$stmt->execute();
 
@@ -502,15 +502,16 @@ class Novedad{
 
 					$fila=$resultado->fetch_assoc();
 
+					if($fila['img3']!=""){
 					//Elimino el archivo fisico
 					unlink("../uploads/".$fila['img3']."");
-
+					}
 
 
 					//CARGA DE IMAGENES EN CARPETA
 					//carga imagenes Big
 					$target_path="../uploads/";
-					$target_path = $target_path . $imagen;
+					$target_path = $target_path . $imagen3;
 
 					move_uploaded_file($_FILES['imagen3']['tmp_name'], $target_path);
 
@@ -520,7 +521,7 @@ class Novedad{
 													SET img3=(?)
 													WHERE ID=(?)");
 
-					$stmt->bind_param("si",$imagen,$id);
+					$stmt->bind_param("si",$imagen3,$id);
 
 					$stmt->execute();
 
@@ -545,15 +546,16 @@ class Novedad{
 
 					$fila=$resultado->fetch_assoc();
 
+					if($fila['img4']!=""){
 					//Elimino el archivo fisico
 					unlink("../uploads/".$fila['img4']."");
-
+					}
 
 
 					//CARGA DE IMAGENES EN CARPETA
 					//carga imagenes Big
 					$target_path="../uploads/";
-					$target_path = $target_path . $imagen;
+					$target_path = $target_path . $imagen4;
 
 					move_uploaded_file($_FILES['imagen4']['tmp_name'], $target_path);
 
@@ -563,7 +565,7 @@ class Novedad{
 													SET img4=(?)
 													WHERE ID=(?)");
 
-					$stmt->bind_param("si",$imagen,$id);
+					$stmt->bind_param("si",$imagen4,$id);
 
 					$stmt->execute();
 
@@ -588,15 +590,16 @@ class Novedad{
 
 					$fila=$resultado->fetch_assoc();
 
+					if($fila['img5']!=""){
 					//Elimino el archivo fisico
 					unlink("../uploads/".$fila['img5']."");
-
+					}
 
 
 					//CARGA DE IMAGENES EN CARPETA
 					//carga imagenes Big
 					$target_path="../uploads/";
-					$target_path = $target_path . $imagen;
+					$target_path = $target_path . $imagen5;
 
 					move_uploaded_file($_FILES['imagen5']['tmp_name'], $target_path);
 
@@ -606,7 +609,7 @@ class Novedad{
 													SET img5=(?)
 													WHERE ID=(?)");
 
-					$stmt->bind_param("si",$imagen,$id);
+					$stmt->bind_param("si",$imagen5,$id);
 
 					$stmt->execute();
 
@@ -631,15 +634,16 @@ class Novedad{
 
 					$fila=$resultado->fetch_assoc();
 
+					if($fila['img6']!=""){
 					//Elimino el archivo fisico
 					unlink("../uploads/".$fila['img6']."");
-
+					}
 
 
 					//CARGA DE IMAGENES EN CARPETA
 					//carga imagenes Big
 					$target_path="../uploads/";
-					$target_path = $target_path . $imagen;
+					$target_path = $target_path . $imagen6;
 
 					move_uploaded_file($_FILES['imagen6']['tmp_name'], $target_path);
 
@@ -649,7 +653,7 @@ class Novedad{
 													SET img6=(?)
 													WHERE ID=(?)");
 
-					$stmt->bind_param("si",$imagen,$id);
+					$stmt->bind_param("si",$imagen6,$id);
 
 					$stmt->execute();
 
@@ -674,15 +678,16 @@ class Novedad{
 
 					$fila=$resultado->fetch_assoc();
 
+					if($fila['img7']!=""){
 					//Elimino el archivo fisico
 					unlink("../uploads/".$fila['img7']."");
-
+					}
 
 
 					//CARGA DE IMAGENES EN CARPETA
 					//carga imagenes Big
 					$target_path="../uploads/";
-					$target_path = $target_path . $imagen;
+					$target_path = $target_path . $imagen7;
 
 					move_uploaded_file($_FILES['imagen7']['tmp_name'], $target_path);
 
@@ -692,7 +697,7 @@ class Novedad{
 													SET img7=(?)
 													WHERE ID=(?)");
 
-					$stmt->bind_param("si",$imagen,$id);
+					$stmt->bind_param("si",$imagen7,$id);
 
 					$stmt->execute();
 
@@ -717,15 +722,16 @@ class Novedad{
 
 					$fila=$resultado->fetch_assoc();
 
+					if($fila['img8']!=""){
 					//Elimino el archivo fisico
 					unlink("../uploads/".$fila['img8']."");
-
+					}
 
 
 					//CARGA DE IMAGENES EN CARPETA
 					//carga imagenes Big
 					$target_path="../uploads/";
-					$target_path = $target_path . $imagen;
+					$target_path = $target_path . $imagen8;
 
 					move_uploaded_file($_FILES['imagen8']['tmp_name'], $target_path);
 
@@ -735,7 +741,7 @@ class Novedad{
 													SET img8=(?)
 													WHERE ID=(?)");
 
-					$stmt->bind_param("si",$imagen,$id);
+					$stmt->bind_param("si",$imagen8,$id);
 
 					$stmt->execute();
 
@@ -760,15 +766,17 @@ class Novedad{
 
 					$fila=$resultado->fetch_assoc();
 
+
+					if($fila['img9']!=""){
 					//Elimino el archivo fisico
 					unlink("../uploads/".$fila['img9']."");
-
+					}
 
 
 					//CARGA DE IMAGENES EN CARPETA
 					//carga imagenes Big
 					$target_path="../uploads/";
-					$target_path = $target_path . $imagen;
+					$target_path = $target_path . $imagen9;
 
 					move_uploaded_file($_FILES['imagen9']['tmp_name'], $target_path);
 
@@ -778,7 +786,7 @@ class Novedad{
 													SET img9=(?)
 													WHERE ID=(?)");
 
-					$stmt->bind_param("si",$imagen,$id);
+					$stmt->bind_param("si",$imagen9,$id);
 
 					$stmt->execute();
 
@@ -803,15 +811,17 @@ class Novedad{
 
 					$fila=$resultado->fetch_assoc();
 
-					//Elimino el archivo fisico
-					unlink("../uploads/".$fila['img10']."");
+					if($fila['img10']!=""){
 
+						//Elimino el archivo fisico
+						unlink("../uploads/".$fila['img10']."");
 
+					}
 
 					//CARGA DE IMAGENES EN CARPETA
 					//carga imagenes Big
 					$target_path="../uploads/";
-					$target_path = $target_path . $imagen;
+					$target_path = $target_path . $imagen10;
 
 					move_uploaded_file($_FILES['imagen10']['tmp_name'], $target_path);
 
@@ -821,7 +831,7 @@ class Novedad{
 													SET img10=(?)
 													WHERE ID=(?)");
 
-					$stmt->bind_param("si",$imagen,$id);
+					$stmt->bind_param("si",$imagen10,$id);
 
 					$stmt->execute();
 

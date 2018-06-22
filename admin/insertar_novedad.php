@@ -1,47 +1,220 @@
-<?php require("inc/header.php"); ?>
+<?php
+require("inc/verificarSession.php");
+ require("inc/head.php"); ?>
 <body>
+<?php require("inc/header.php") ?>
+<div class="row">
+  <div class="container">
+    <h1>INGRESAR NOVEDADES</h1>
+  </div>
+</div><br>
+<div class="row">
+  <div class="container">
+  	<form action="landing_insertar_novedad.php" class="some_form" id="my-dropzone-element-id"enctype="multipart/form-data" method="POST">	
+  	 <div class="row">
 
-	<form action="landing_insertar_novedad.php" class="some_form" id="my-dropzone-element-id"enctype="multipart/form-data" method="POST">	
-		<label for="titulo">Ingrese un titulo</label><br>
-    <input type="text" name="titulo" id="titulo"> <br><br>
-    <label for="descripcion">Descripcion</label><br>
-		<input type="text" name="descripcion" id="descripcion"> <br><br>
-  	
-      <label for="imagen1"> Imagen 1</label><br><br>
-      <input type="file" name="imagen1" id="imagen1"><br><br>
-
-      <label for="imagen2"> Imagen 2</label><br><br>
-      <input type="file" name="imagen2" id="imagen2"><br><br>
-
-      <label for="imagen3"> Imagen 3</label><br><br>
-      <input type="file" name="imagen3" id="imagen3"><br><br>
-      <label for="imagen4"> Imagen 4</label><br><br>
-      <input type="file" name="imagen4" id="imagen4"><br><br>
-      <label for="imagen5"> Imagen 5</label><br><br>
-      <input type="file" name="imagen5" id="imagen5"><br><br>
-      <label for="imagen6"> Imagen 6</label><br><br>
-      <input type="file" name="imagen6" id="imagen6"><br><br>
-      <label for="imagen7"> Imagen 7</label><br><br>
-      <input type="file" name="imagen7" id="imagen7"><br><br>
-      <label for="imagen8"> Imagen 8</label><br><br>
-      <input type="file" name="imagen8" id="imagen8"><br><br>
-      <label for="imagen9"> Imagen 9</label><br><br>
-      <input type="file" name="imagen9" id="imagen9"><br><br>
-      <label for="imagen10"> Imagen 10</label><br><br>
-      <input type="file" name="imagen10" id="imagen10">
-
-      <br><br>
-	      <button type="submit">Submit data and files!</button>
+        <div class="col-lg-6 col-sm-6 margin">
+          <div class="form-group">
+          	<label for="titulo">Ingrese un titulo</label><br>
+            <input type="text" name="titulo" class="form-control" id="titulo"> 
+          </div>
+        </div>
 
 
-    <div id="imgContainer"></div>
+        <div class="col-lg-6 col-sm-6 margin">
+          <div class="form-group">
+            <label for="descripcion">Descripcion</label><br>
+        		<input type="text" name="descripcion" id="descripcion" class="form-control"> 
+          </div>
+        </div>
 
-	</form>
+      
+      <div class="col-lg-6 col-sm-6 margin">
+         <label for="">Imagen 1 </label>
+            <div class="input-group">
+                <label class="input-group-btn">
+                    <span class="btn btn-primary">
+                        Buscar&hellip; <input type="file" style="display: none;" name="imagen1">
+                    </span>
+                </label>
+                <input type="text" class="form-control" style="color:black !important;" readonly>
+            </div>
+        </div>
+
+       <div class="col-lg-6 col-sm-6 margin">
+         <label for="">Imagen 2 </label>
+            <div class="input-group">
+                <label class="input-group-btn">
+                    <span class="btn btn-primary">
+                        Buscar&hellip; <input type="file" style="display: none;" name="imagen2">
+                    </span>
+                </label>
+                <input type="text" class="form-control" style="color:black !important;" readonly>
+            </div>
+        </div>
+
+
+      <div class="col-lg-6 col-sm-6 margin">
+         <label for="">Imagen 3 </label>
+            <div class="input-group">
+                <label class="input-group-btn">
+                    <span class="btn btn-primary">
+                        Buscar&hellip; <input type="file" style="display: none;" name="imagen3">
+                    </span>
+                </label>
+                <input type="text" class="form-control" style="color:black !important;" readonly>
+            </div>
+        </div>
 
 
 
+      <div class="col-lg-6 col-sm-6 margin">
+         <label for="">Imagen 4 </label>
+            <div class="input-group">
+                <label class="input-group-btn">
+                    <span class="btn btn-primary">
+                        Buscar&hellip; <input type="file" style="display: none;" name="imagen4">
+                    </span>
+                </label>
+                <input type="text" class="form-control" style="color:black !important;" readonly>
+            </div>
+        </div>
+
+
+
+      <div class="col-lg-6 col-sm-6 margin">
+         <label for="">Imagen 5 </label>
+            <div class="input-group">
+                <label class="input-group-btn">
+                    <span class="btn btn-primary">
+                        Buscar&hellip; <input type="file" style="display: none;" name="imagen5">
+                    </span>
+                </label>
+                <input type="text" class="form-control" style="color:black !important;" readonly>
+            </div>
+        </div>
+
+
+       <div class="col-lg-6 col-sm-6 margin">
+         <label for="">Imagen 6 </label>
+            <div class="input-group">
+                <label class="input-group-btn">
+                    <span class="btn btn-primary">
+                        Buscar&hellip; <input type="file" style="display: none;" name="imagen6">
+                    </span>
+                </label>
+                <input type="text" class="form-control" style="color:black !important;" readonly>
+            </div>
+        </div>
+
+
+
+      <div class="col-lg-6 col-sm-6 margin">
+         <label for="">Imagen 7 </label>
+            <div class="input-group">
+                <label class="input-group-btn">
+                    <span class="btn btn-primary">
+                        Buscar&hellip; <input type="file" style="display: none;" name="imagen7">
+                    </span>
+                </label>
+                <input type="text" class="form-control" style="color:black !important;" readonly>
+            </div>
+        </div>
+
+
+
+
+
+      <div class="col-lg-6 col-sm-6 margin">
+         <label for="">Imagen 8 </label>
+            <div class="input-group">
+                <label class="input-group-btn">
+                    <span class="btn btn-primary">
+                        Buscar&hellip; <input type="file" style="display: none;" name="imagen8">
+                    </span>
+                </label>
+                <input type="text" class="form-control" style="color:black !important;" readonly>
+            </div>
+        </div>
+
+
+
+      <div class="col-lg-6 col-sm-6 margin">
+         <label for="">Imagen 9 </label>
+            <div class="input-group">
+                <label class="input-group-btn">
+                    <span class="btn btn-primary">
+                        Buscar&hellip; <input type="file" style="display: none;" name="imagen9">
+                    </span>
+                </label>
+                <input type="text" class="form-control" style="color:black !important;" readonly>
+            </div>
+        </div>
+
+
+      <div class="col-lg-6 col-sm-6 margin">
+         <label for="">Imagen 10 </label>
+            <div class="input-group">
+                <label class="input-group-btn">
+                    <span class="btn btn-primary">
+                        Buscar&hellip; <input type="file" style="display: none;" name="imagen10">
+                    </span>
+                </label>
+                <input type="text" class="form-control" style="color:black !important;" readonly>
+            </div>
+        </div>
+          
+        <div class="row">
+          <div class="container">
+            <div class="col-lg-6 col-sm-6">
+
+              <a type="submit" class="btn btn-primary left submit-btn" href="home.php">Regresar a home</a>
+    	         
+            </div>
+            <div class="col-lg-6 col-sm-6">
+              <button type="submit" class="btn btn-primary right submit-btn">Ingresar novedades</button>
+            </div>
+          </div>
+        </div>
+  
+      <div id="imgContainer"></div>
+
+  	</form>
+
+  </div>
+</div>
 
 <script src="../js/jquery.min.js"></script>
+<?php require("inc/jquery-bootstrap-scripts.php") ?>
+<script>
+  $(function() {
+
+  // We can attach the `fileselect` event to all file inputs on the page
+  $(document).on('change', ':file', function() {
+    var input = $(this),
+        numFiles = input.get(0).files ? input.get(0).files.length : 1,
+        label = input.val().replace(/\\/g, '/').replace(/.*\//, '');
+    input.trigger('fileselect', [numFiles, label]);
+  });
+
+  // We can watch for our custom `fileselect` event like this
+  $(document).ready( function() {
+      $(':file').on('fileselect', function(event, numFiles, label) {
+
+          var input = $(this).parents('.input-group').find(':text'),
+              log = numFiles > 1 ? numFiles + ' files selected' : label;
+
+          if( input.length ) {
+              input.val(log);
+          } else {
+              if( log ) alert(log);
+          }
+
+      });
+  });
+  
+});
+</script>
 
 
 
