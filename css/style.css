@@ -126,7 +126,7 @@ ul, ol {
 }
 
 .md-padding {
-    padding-top: 120px;
+    padding-top: 40px;
     padding-bottom: 120px;
 }
 
@@ -140,8 +140,8 @@ ul, ol {
 
 .bg-grey {
     background-color: #FAFAFA;
-    border-top: 1px solid #EEE;
-    border-bottom: 1px solid #EEE;
+    /*border-top: 1px solid #EEE;*/
+    /*border-bottom: 1px solid #EEE;*/
 }
 
 .bg-dark {
@@ -285,6 +285,22 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focu
 }
 
 @media only screen and (max-width: 767px) {
+
+    .background-nov .cont h1 {
+    
+    font-size: 2.9rem;
+    }
+
+    .cont ul.flex img{
+    width: 50px !important;
+    height: 50px !important;
+}
+
+    .owl-theme .owl-nav {
+    margin-top: 0px !important;
+    }
+
+
     #nav.nav-transparent .navbar-brand .logo-alt {
         display: none !important;
     }
@@ -1599,17 +1615,19 @@ header {
 
 .owl-theme .owl-dots .owl-dot span {
     border: none;
-    background: #EEE;
+    background: white;
     -webkit-transition: 0.2s all;
     transition: 0.2s all;
+    opacity: 0.3;
 }
 
 .owl-theme .owl-dots .owl-dot:hover span {
-    background: #6195FF;
+    background: white;
+    opacity:1;
 }
 .owl-theme .owl-dots .owl-dot.active span {
-	  background: #6195FF;
-	  width:20px;
+	  background: white;
+    opacity:1;
 }
 
 /* -- nav -- */
@@ -1792,4 +1810,79 @@ header {
 #portfolio img {
     /*width:252px !important;
     height: 231px !important;*/
+}
+
+.background-nov{
+    background-image: url(../img/background-nov.jpg);
+    height: 495px;
+    /* position: absolute; */
+    /* left: 0; */
+    /* top: 0; */
+    /* right: 0; */
+    /* bottom: 0; */
+    z-index: -1; 
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+
+}
+
+.background-nov .overlay{
+    width: 100%;
+    height: 100%;
+    background-color: #676767;
+    opacity: 0.6;
+    position:absolute;
+    top:0;
+    z-index: -1; 
+
+}
+
+.background-nov .cont{
+    z-index: 2000;
+    color:white;
+}
+
+.background-nov .cont h1{
+    color:white;
+}
+
+.background-nov .cont h4{
+    color:rgb(239, 194, 58);
+        letter-spacing: 4px;
+}
+
+.cont ul.flex img{
+    width: 100px;
+    height: 100px;
+}
+
+.cont ul.flex{
+    display:flex;
+    flex-direction: row;
+}
+
+.cont ul.flex li:not(:first-child){
+    margin-left:2%;
+}
+
+.owl-theme .container{
+    padding:50px;
+}
+@media screen and (-webkit-min-device-pixel-ratio:0){
+  .background-nov{
+    background-image: url(../img/background-nov.jpg);
+    height: 452px;
+    /* position: absolute; */
+    /* left: 0; */
+    /* top: 0; */
+    /* right: 0; */
+    /* bottom: 0; */
+     z-index: -1; 
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+  -webkit-transform: translate3d(0,0,0);
+
+} 
 }

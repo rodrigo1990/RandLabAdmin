@@ -23,7 +23,7 @@ require("inc/head.php");
 							<label for="pass">Ingrese password</label>
 							<input type="password" name="pass" id="pass" class="form-control text-center">
 						</div>
-		              <a  class="btn btn-primary center-block fix-btn-width submit-access-btn" onClick="validarUsuario()">Regresar a home</a>
+		              <a  class="btn btn-primary center-block fix-btn-width submit-access-btn" onClick="validarUsuario()">Ingresar</a>
 
 				</div>
 			</div>

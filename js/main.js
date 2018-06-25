@@ -70,10 +70,10 @@
 
 	///////////////////////////
 	// magnificPopup
-	$('.work').magnificPopup({
+	/*$('.work').magnificPopup({
 		delegate: '.lightbox',
 		type: 'image'
-	});
+	});*/
 
 	///////////////////////////
 	// Owl Carousel
