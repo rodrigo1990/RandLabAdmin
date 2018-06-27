@@ -48,7 +48,7 @@ $nov = new Novedad();
                   <span class="center-block">
                     <h3>IMAGEN ACTUAL:</h3><?php $nov->imagen1Actual($_GET['ID']) ?>
                   </span><br>
-                <img class="center-block" src="../uploads/<?php $nov->imagen1Actual(['ID']) ?>" alt="">
+                <img class="center-block" src="../uploads/<?php  $nov->imagen1Actual($_GET['ID']) ?>" alt="">
             </div>
         </div>
 
@@ -67,7 +67,7 @@ $nov = new Novedad();
                   <span class="center-block">
                     <h3>IMAGEN ACTUAL:</h3><?php $nov->imagen2Actual($_GET['ID']) ?>
                   </span><br>
-                <img class="center-block" src="../uploads/<?php $nov->imagen2Actual(['ID']) ?>" alt="">
+                <img class="center-block" src="../uploads/<?php $nov->imagen2Actual($_GET['ID']) ?>" alt="">
             </div>
         </div>
       
@@ -87,7 +87,7 @@ $nov = new Novedad();
                   <span class="center-block">
                     <h3>IMAGEN ACTUAL:</h3><?php $nov->imagen3Actual($_GET['ID']) ?>
                   </span><br>
-                <img class="center-block" src="../uploads/<?php $nov->imagen3Actual(['ID']) ?>" alt="">
+                <img class="center-block" src="../uploads/<?php $nov->imagen3Actual($_GET['ID']) ?>" alt="">
             </div>
         </div>
 
@@ -105,7 +105,7 @@ $nov = new Novedad();
                   <span class="center-block">
                     <h3>IMAGEN ACTUAL:</h3><?php $nov->imagen4Actual($_GET['ID']) ?>
                   </span><br>
-                <img class="center-block" src="../uploads/<?php $nov->imagen4Actual(['ID']) ?>" alt="">
+                <img class="center-block" src="../uploads/<?php $nov->imagen4Actual($_GET['ID']) ?>" alt="">
             </div>
         </div>
 
@@ -123,7 +123,7 @@ $nov = new Novedad();
                   <span class="center-block">
                     <h3>IMAGEN ACTUAL:</h3><?php $nov->imagen5Actual($_GET['ID']) ?>
                   </span><br>
-                <img class="center-block" src="../uploads/<?php $nov->imagen5Actual(['ID']) ?>" alt="">
+                <img class="center-block" src="../uploads/<?php $nov->imagen5Actual($_GET['ID']) ?>" alt="">
             </div>
         </div>
 
@@ -141,7 +141,7 @@ $nov = new Novedad();
                   <span class="center-block">
                     <h3>IMAGEN ACTUAL:</h3><?php $nov->imagen6Actual($_GET['ID']) ?>
                   </span><br>
-                <img class="center-block" src="../uploads/<?php $nov->imagen6Actual(['ID']) ?>" alt="">
+                <img class="center-block" src="../uploads/<?php $nov->imagen6Actual($_GET['ID']) ?>" alt="">
             </div>
         </div>
 
@@ -169,7 +169,7 @@ $nov = new Novedad();
                   <span class="center-block">
                     <h3>IMAGEN ACTUAL:</h3><?php $nov->imagen7Actual($_GET['ID']) ?>
                   </span><br>
-                <img class="center-block" src="../uploads/<?php $nov->imagen7Actual(['ID']) ?>" alt="">
+                <img class="center-block" src="../uploads/<?php $nov->imagen7Actual($_GET['ID']) ?>" alt="">
             </div>
         </div>
       
@@ -189,7 +189,7 @@ $nov = new Novedad();
                   <span class="center-block">
                     <h3>IMAGEN ACTUAL:</h3><?php $nov->imagen8Actual($_GET['ID']) ?>
                   </span><br>
-                <img class="center-block" src="../uploads/<?php $nov->imagen8Actual(['ID']) ?>" alt="">
+                <img class="center-block" src="../uploads/<?php $nov->imagen8Actual($_GET['ID']) ?>" alt="">
             </div>
         </div>
 
@@ -210,7 +210,7 @@ $nov = new Novedad();
                   <span class="center-block">
                     <h3>IMAGEN ACTUAL:</h3><?php $nov->imagen9Actual($_GET['ID']) ?>
                   </span><br>
-                <img class="center-block" src="../uploads/<?php $nov->imagen9Actual(['ID']) ?>" alt="">
+                <img class="center-block" src="../uploads/<?php $nov->imagen9Actual($_GET['ID']) ?>" alt="">
             </div>
         </div>
 
@@ -231,7 +231,7 @@ $nov = new Novedad();
                   <span class="center-block">
                     <h3>IMAGEN ACTUAL:</h3><?php $nov->imagen10Actual($_GET['ID']) ?>
                   </span><br>
-                <img class="center-block" src="../uploads/<?php $nov->imagen10Actual(['ID']) ?>" alt="">
+                <img class="center-block" src="../uploads/<?php $nov->imagen10Actual($_GET['ID']) ?>" alt="">
             </div>
         </div>
       
@@ -258,6 +258,37 @@ $nov = new Novedad();
 
 
 <script src="../js/jquery.min.js"></script>
+<?php require("inc/jquery-bootstrap-scripts.php") ?>
+<script>
+  $(function() {
+
+  // We can attach the `fileselect` event to all file inputs on the page
+  $(document).on('change', ':file', function() {
+    var input = $(this),
+        numFiles = input.get(0).files ? input.get(0).files.length : 1,
+        label = input.val().replace(/\\/g, '/').replace(/.*\//, '');
+    input.trigger('fileselect', [numFiles, label]);
+  });
+
+  // We can watch for our custom `fileselect` event like this
+  $(document).ready( function() {
+      $(':file').on('fileselect', function(event, numFiles, label) {
+
+          var input = $(this).parents('.input-group').find(':text'),
+              log = numFiles > 1 ? numFiles + ' files selected' : label;
+
+          if( input.length ) {
+              input.val(log);
+          } else {
+              if( log ) alert(log);
+          }
+
+      });
+  });
+  
+});
+</script>
+
 
 
 

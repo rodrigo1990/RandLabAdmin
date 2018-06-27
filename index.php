@@ -1,3 +1,10 @@
+<?php
+require_once("clases/Novedad.php"); 
+
+$nov = new Novedad();
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -39,7 +46,6 @@
 	<!-- FANCY BOX -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.4/jquery.fancybox.min.css" />
 
-
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 	<!--[if lt IE 9]>
@@ -54,6 +60,12 @@
               max-width: 100%;
               height: auto;
             }
+
+        .gal-image{
+        	height: 150px;
+        	width: 150px;
+
+        }
 	    
 	</style>
 </head>
@@ -827,149 +839,12 @@
 						<div class="cont">
 							<!--  <div class="container" style="padding:50px">-->
 								<div class="owl-carousel owl-theme" style="">
+								<?php 
+									$nov->listarNovedadesUser();
 
-									<div>
-										<div class="container">
-											<h1>Nombre de evento</h1>
-											<h4>01/01/2018</h4>	
-											<p>Quisque accumsan ut lorem in commodo. Vivamus dolor lacus, tempus quis ex eget, elementum ullamcorper purus. Duis dictum velit eu ante posuere, sit amet tempus nisi viverra. Nunc interdum lorem non tempus lobortis. Integer porttitor egestas auctor. </p>
-											<ul class="flex">
-												<li>
-													<a data-fancybox='gallery1' href='uploads/nov1/1.jpg' data-caption="Quisque accumsan ut lorem in commodo. Vivamus dolor lacus, tempus quis ex eget, elementum ullamcorper purus. Duis dictum velit eu ante posuere, sit amet tempus nisi viverra. Nunc interdum lorem non tempus lobortis. Integer porttitor egestas auctor.">
-														<img src='uploads/nov1/1.jpg'>
-													</a> 
-												</li>
-												<li>
-													<a data-fancybox='gallery1' href='uploads/nov1/2.png' data-caption="Quisque accumsan ut lorem in commodo. Vivamus dolor lacus, tempus quis ex eget, elementum ullamcorper purus. Duis dictum velit eu ante posuere, sit amet tempus nisi viverra. Nunc interdum lorem non tempus lobortis. Integer porttitor egestas auctor." >
-														<img src='uploads/nov1/2.png'>
-													</a>
-												</li>
-												<li>
-													<a data-fancybox='gallery1' href='uploads/nov1/3.jpg' data-caption="Quisque accumsan ut lorem in commodo. Vivamus dolor lacus, tempus quis ex eget, elementum ullamcorper purus. Duis dictum velit eu ante posuere, sit amet tempus nisi viverra. Nunc interdum lorem non tempus lobortis. Integer porttitor egestas auctor.">
-														<img src='uploads/nov1/3.jpg'>
-													</a>
-												</li>
-												<li>
-													<a data-fancybox='gallery1' href='uploads/nov1/4.jpg' data-caption="Quisque accumsan ut lorem in commodo. Vivamus dolor lacus, tempus quis ex eget, elementum ullamcorper purus. Duis dictum velit eu ante posuere, sit amet tempus nisi viverra. Nunc interdum lorem non tempus lobortis. Integer porttitor egestas auctor.">
-														<img src='uploads/nov1/4.jpg'>
-													</a>
-												</li>
-												<li>
-													<a data-fancybox='gallery1' href='uploads/nov1/5.jpg' data-caption="Quisque accumsan ut lorem in commodo. Vivamus dolor lacus, tempus quis ex eget, elementum ullamcorper purus. Duis dictum velit eu ante posuere, sit amet tempus nisi viverra. Nunc interdum lorem non tempus lobortis. Integer porttitor egestas auctor.">
-														<img src='uploads/nov1/5.jpg'>
-													</a>
-												</li>
-												<li>
-													<a data-fancybox='gallery1' href='uploads/nov1/6.jpg' data-caption="Quisque accumsan ut lorem in commodo. Vivamus dolor lacus, tempus quis ex eget, elementum ullamcorper purus. Duis dictum velit eu ante posuere, sit amet tempus nisi viverra. Nunc interdum lorem non tempus lobortis. Integer porttitor egestas auctor.">
-														<img src='uploads/nov1/6.jpg'>
-													</a>
-
-												</li>
-										
-											</ul>
-										</div>
-									</div>
-									<div>
-										<div class="container">
-
-												<h1>Nombre de evento 2</h1>
-												<h4>01/01/2018</h4>	
-												<p>Quisque accumsan ut lorem in commodo. Vivamus dolor lacus, tempus quis ex eget, elementum ullamcorper purus. Duis dictum velit eu ante posuere, sit amet tempus nisi viverra. Nunc interdum lorem non tempus lobortis. Integer porttitor egestas auctor. </p>
-												<ul class="flex">
-												<li>
-													<a data-fancybox='gallery2' href='uploads/nov2/10.jpg'>
-														<img src='uploads/nov2/10.jpg'>
-													</a> 
-												</li>
-												<li>
-													<a data-fancybox='gallery2' href='uploads/nov2/11.jpg'>
-														<img src='uploads/nov2/11.jpg'>
-													</a>
-												</li>
-												<li>
-													<a data-fancybox='gallery2' href='uploads/nov2/12.jpg'>
-														<img src='uploads/nov2/12.jpg'>
-													</a>
-												</li>
-												<li>
-													<a data-fancybox='gallery2' href='uploads/nov2/13.jpg' >
-														<img src='uploads/nov2/13.jpg'>
-													</a>
-												</li>
-												<li>
-													<a data-fancybox='gallery2' href='uploads/nov2/14.png' >
-														<img src='uploads/nov2/14.png'>
-													</a>
-												</li>
-												<li>
-													<a data-fancybox='gallery2' href='uploads/nov2/15.jpg'>
-														<img src='uploads/nov2/15.jpg'>
-													</a>
-
-												</li>
-												<a data-fancybox='gallery2' href='uploads/nov2/15.jpg' style="display:none">
-														<img src='uploads/nov2/15.jpg'>
-													</a>
-													<a data-fancybox='gallery2' href='uploads/nov2/15.jpg' style="display:none">
-														<img src='uploads/nov2/15.jpg'>
-													</a>
-													<a data-fancybox='gallery2' href='uploads/nov2/15.jpg' style="display:none">
-														<img src='uploads/nov2/15.jpg'>
-													</a>
-													<a data-fancybox='gallery2' href='uploads/nov2/15.jpg' style="display:none">
-														<img src='uploads/nov2/15.jpg'>
-													</a>
-													<a data-fancybox='gallery2' href='uploads/nov2/15.jpg' style="display:none">
-														<img src='uploads/nov2/15.jpg'>
-													</a>
-													<a data-fancybox='gallery2' href='uploads/nov2/15.jpg' style="display:none">
-														<img src='uploads/nov2/15.jpg'>
-													</a>
-													<a data-fancybox='gallery2' href='uploads/nov2/15.jpg' style="display:none">
-														<img src='uploads/nov2/15.jpg'>
-													</a>
-													<a data-fancybox='gallery2' href='uploads/nov2/15.jpg' style="display:none">
-														<img src='uploads/nov2/15.jpg'>
-													</a>
-													<a data-fancybox='gallery2' href='uploads/nov2/15.jpg' style="display:none">
-														<img src='uploads/nov2/15.jpg'>
-													</a>
-										
-											</ul>
-										</div>
-									</div>
-									<div>
-										<div class="container">
-											<h1>Nombre de evento 3</h1>
-											<h4>01/01/2018</h4>	
-											<p>Quisque accumsan ut lorem in commodo. Vivamus dolor lacus, tempus quis ex eget, elementum ullamcorper purus. Duis dictum velit eu ante posuere, sit amet tempus nisi viverra. Nunc interdum lorem non tempus lobortis. Integer porttitor egestas auctor. </p>
-											<ul class="flex">
-												<li><img src="uploads/141061401.jpg"> </li>
-												<li><img src="uploads/141061401.jpg"></li>
-												<li><img src="uploads/141061401.jpg"></li>
-												<li><img src="uploads/141061401.jpg"></li>
-												<li><img src="uploads/141061401.jpg"></li>
-												<li><img src="uploads/141061401.jpg"> </li>
-										
-											</ul>
-										</div>
-									</div>
-									<div>
-										<div class="container">
-											<h1>Nombre de evento 4</h1>
-											<h4>01/01/2018</h4>	
-											<p>Quisque accumsan ut lorem in commodo. Vivamus dolor lacus, tempus quis ex eget, elementum ullamcorper purus. Duis dictum velit eu ante posuere, sit amet tempus nisi viverra. Nunc interdum lorem non tempus lobortis. Integer porttitor egestas auctor. </p>
-											<ul class="flex">
-												<li><img src="uploads/141061401.jpg"> </li>
-												<li><img src="uploads/141061401.jpg"></li>
-												<li><img src="uploads/141061401.jpg"></li>
-												<li><img src="uploads/141061401.jpg"></li>
-												<li><img src="uploads/141061401.jpg"></li>
-												<li><img src="uploads/141061401.jpg"> </li>
-										
-											</ul>
-										</div>
-									</div>
+								 ?>
+									
+									
 								</div>
 							<!--</div> container -->
 							
@@ -1145,13 +1020,12 @@
 	<script src="owlcarousel/dist/owl.carousel.js"></script>
 	<script>
 		  $jQueryOwl('.owl-carousel').owlCarousel({
-		    loop:true,
+		    loop:false,
 		    margin:10,
 		    autoplay:true,
 		    autoplayTimeout:7500,
 		    nav:true,
 		    dots:true,
-		    items:3,
 		    responsive:{
 		        0:{
 		            items:1
@@ -1165,7 +1039,64 @@
 	<script>
 		$("a.grouped_elements").fancybox();
 	</script>
+	<!-- RESIZE ME -->
+	<script type="text/javascript" src="js/jquery.ae.image.resize.min.js"></script>
+	<script>
+    $(function() {
+      $jQueryOwl( ".resizeme" ).aeImageResize({ height: 300, width: 100 });
+    });
+  </script>
 
 </body>
 
 </html>
+<!--
+	<div class="owl-carousel owl-theme" style="">
+								<div>
+					<div class='container'>
+						<h1>Titulo 1</h1>
+						<h4>20/03/2018</h4>	
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel viverra tortor. Quisque ut turpis auctor, sodales quam ultrices, ultrices felis. Maecenas viverra posuere risus ut gravida. Vestibulum cursus dui at quam molestie ullamcorper. Pellentesque convallis dolor in tempor mattis. Nunc porttitor finibus libero ut consequat. Nullam efficitur orci at pulvinar pharetra. Maecenas pulvinar venenatis turpis sit amet bibendum. Donec lacus est, iaculis a eleifend eget, consectetur eget felis. Maecenas rutrum erat id accumsan pulvinar. Suspendisse aliquam congue neque sit amet lobortis. Vivamus at mi metus.</p>
+						
+
+
+
+ <ul class="flex">
+												 <a data-fancybox='gallery1' href='uploads/nov1/1.jpg' data-caption="Quisque accumsan ut lorem in commodo. Vivamus dolor lacus, tempus quis ex eget, elementum ullamcorper purus. Duis dictum velit eu ante posuere, sit amet tempus nisi viverra. Nunc interdum lorem non tempus lobortis. Integer porttitor egestas auctor.">
+												</a>
+												<li>
+													<a data-fancybox='gallery1' href='uploads/nov1/1.jpg' data-caption="Quisque accumsan ut lorem in commodo. Vivamus dolor lacus, tempus quis ex eget, elementum ullamcorper purus. Duis dictum velit eu ante posuere, sit amet tempus nisi viverra. Nunc interdum lorem non tempus lobortis. Integer porttitor egestas auctor.">
+														<div class="gal-image" style='background:url(uploads/nov1/1.jpg);background-repeat: no-repeat; background-size: contain;background-position:center; '></div>
+													</a> 
+												</li>
+												<li>
+													<a data-fancybox='gallery1' href='uploads/nov1/2.png' data-caption="Quisque accumsan ut lorem in commodo. Vivamus dolor lacus, tempus quis ex eget, elementum ullamcorper purus. Duis dictum velit eu ante posuere, sit amet tempus nisi viverra. Nunc interdum lorem non tempus lobortis. Integer porttitor egestas auctor." >
+														<div class="gal-image" style='background:url(uploads/nov1/2.jpg);background-repeat: no-repeat; background-size: contain;background-position:center; '></div>
+													</a>
+												</li>
+												<li>
+													<a data-fancybox='gallery1' href='uploads/nov1/3.jpg' data-caption="Quisque accumsan ut lorem in commodo. Vivamus dolor lacus, tempus quis ex eget, elementum ullamcorper purus. Duis dictum velit eu ante posuere, sit amet tempus nisi viverra. Nunc interdum lorem non tempus lobortis. Integer porttitor egestas auctor.">
+														<div class="gal-image" style='background:url(uploads/nov1/3.jpg);background-repeat: no-repeat; background-size: contain;background-position:center; '></div>
+													</a>
+												</li>
+												<li>
+													<a data-fancybox='gallery1' href='uploads/nov1/4.jpg' data-caption="Quisque accumsan ut lorem in commodo. Vivamus dolor lacus, tempus quis ex eget, elementum ullamcorper purus. Duis dictum velit eu ante posuere, sit amet tempus nisi viverra. Nunc interdum lorem non tempus lobortis. Integer porttitor egestas auctor.">
+														<div class="gal-image" style='background-image:url(uploads/nov1/4.jpg);background-repeat: no-repeat; background-size: contain;background-position:center;  '></div>
+													</a>
+												</li>
+												<li>
+													<a data-fancybox='gallery1' href='uploads/nov1/5.jpg' data-caption="Quisque accumsan ut lorem in commodo. Vivamus dolor lacus, tempus quis ex eget, elementum ullamcorper purus. Duis dictum velit eu ante posuere, sit amet tempus nisi viverra. Nunc interdum lorem non tempus lobortis. Integer porttitor egestas auctor.">
+														<div class="gal-image" style='background-image:url(uploads/nov1/5.jpg);background-repeat: no-repeat; background-size: contain;background-position:center;'></div>
+													</a>
+												</li>
+												<li>
+													<a data-fancybox='gallery1' href='uploads/nov1/6.jpg' data-caption="Quisque accumsan ut lorem in commodo. Vivamus dolor lacus, tempus quis ex eget, elementum ullamcorper purus. Duis dictum velit eu ante posuere, sit amet tempus nisi viverra. Nunc interdum lorem non tempus lobortis. Integer porttitor egestas auctor.">
+														<div class="gal-image" style='background-image:url(uploads/nov1/6.jpg);background-repeat: no-repeat; background-size: contain;background-position:center;'></div>
+													</a>
+
+												</li>
+										
+											</ul>
+									</div>
+								</div>	
+								</div>-->

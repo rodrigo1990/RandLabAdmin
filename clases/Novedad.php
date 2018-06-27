@@ -10,6 +10,85 @@ class Novedad{
 
 	}
 
+	public function listarNovedadesUser(){
+		$bd = new BaseDatos();
+		$i = 0;//contador de grupos
+		//try{
+			$sql="SELECT *
+				 FROM novedad";
+
+
+
+			$consulta=mysqli_query($bd->conexion,$sql);
+			
+		while($fila=mysqli_fetch_assoc($consulta)){
+			$i++;
+		  echo "<div>
+					<div class='container'>
+						<h1>".$fila['titulo']."</h1>
+						<h4>".date("d/m/Y",strtotime($fila['fecha']))."</h4>	
+						<p>".$fila['descripcion']."</p>
+						<ul class='flex'>
+							<a data-fancybox='gallery".$i."' href='uploads/".$fila['img1']."' data-caption='Quisque accumsan ut lorem in commodo. Vivamus dolor lacus, tempus quis ex eget, elementum ullamcorper purus. Duis dictum velit eu ante posuere, sit amet tempus nisi viverra. Nunc interdum lorem non tempus lobortis. Integer porttitor egestas auctor.'>
+							GALERIA DE IMAGENES
+							</a>";
+
+		if($fila["img2"]!=""){
+
+			echo "<a  style='display:none'data-fancybox='gallery".$i."' href='uploads/".$fila['img2']."' data-caption='Quisque accumsan ut lorem in commodo. Vivamus dolor lacus, tempus quis ex eget, elementum ullamcorper purus. Duis dictum velit eu ante posuere, sit amet tempus nisi viverra. Nunc interdum lorem non tempus lobortis. Integer porttitor egestas auctor.'>
+								</a>";
+
+		}
+
+		if($fila["img3"]!=""){
+			echo "<a  style='display:none'data-fancybox='gallery".$i."' href='uploads/".$fila['img3']."' data-caption='Quisque accumsan ut lorem in commodo. Vivamus dolor lacus, tempus quis ex eget, elementum ullamcorper purus. Duis dictum velit eu ante posuere, sit amet tempus nisi viverra. Nunc interdum lorem non tempus lobortis. Integer porttitor egestas auctor.' >
+								</a>";
+		}
+
+		if($fila["img4"]!=""){
+			echo "<a  style='display:none'data-fancybox='gallery".$i."' href='uploads/".$fila['img4']."' data-caption='Quisque accumsan ut lorem in commodo. Vivamus dolor lacus, tempus quis ex eget, elementum ullamcorper purus. Duis dictum velit eu ante posuere, sit amet tempus nisi viverra. Nunc interdum lorem non tempus lobortis. Integer porttitor egestas auctor.'>
+								</a>";
+		}
+
+		if($fila["img5"]!=""){
+			echo "<a  style='display:none'data-fancybox='gallery".$i."' href='uploads/".$fila['img5']."' data-caption='Quisque accumsan ut lorem in commodo. Vivamus dolor lacus, tempus quis ex eget, elementum ullamcorper purus. Duis dictum velit eu ante posuere, sit amet tempus nisi viverra. Nunc interdum lorem non tempus lobortis. Integer porttitor egestas auctor.'>
+								</a>";
+		}
+
+		if($fila["img6"]!=""){
+			echo "<a  style='display:none'data-fancybox='gallery".$i."' href='uploads/".$fila['img6']."' data-caption='Quisque accumsan ut lorem in commodo. Vivamus dolor lacus, tempus quis ex eget, elementum ullamcorper purus. Duis dictum velit eu ante posuere, sit amet tempus nisi viverra. Nunc interdum lorem non tempus lobortis. Integer porttitor egestas auctor.'>
+								</a>";
+		}
+
+		if($fila["img7"]!=""){
+			echo "<a  style='display:none'data-fancybox='gallery".$i."' href='uploads/".$fila['img7']."' data-caption='Quisque accumsan ut lorem in commodo. Vivamus dolor lacus, tempus quis ex eget, elementum ullamcorper purus. Duis dictum velit eu ante posuere, sit amet tempus nisi viverra. Nunc interdum lorem non tempus lobortis. Integer porttitor egestas auctor.'>
+								</a>";
+		}
+
+		if($fila["img8"]!=""){
+			echo "<a  style='display:none'data-fancybox='gallery".$i."' href='uploads/".$fila['img8']."' data-caption='Quisque accumsan ut lorem in commodo. Vivamus dolor lacus, tempus quis ex eget, elementum ullamcorper purus. Duis dictum velit eu ante posuere, sit amet tempus nisi viverra. Nunc interdum lorem non tempus lobortis. Integer porttitor egestas auctor.'>
+								</a>";
+		}
+
+		if($fila["img9"]!=""){
+			echo "<a  style='display:none'data-fancybox='gallery".$i."' href='uploads/".$fila['img9']."' data-caption='Quisque accumsan ut lorem in commodo. Vivamus dolor lacus, tempus quis ex eget, elementum ullamcorper purus. Duis dictum velit eu ante posuere, sit amet tempus nisi viverra. Nunc interdum lorem non tempus lobortis. Integer porttitor egestas auctor.'>
+								</a>";
+		}
+
+		if($fila["img10"]!=""){
+			echo "<a  style='display:none'data-fancybox='gallery".$i."' href='uploads/".$fila['img10']."' data-caption='Quisque accumsan ut lorem in commodo. Vivamus dolor lacus, tempus quis ex eget, elementum ullamcorper purus. Duis dictum velit eu ante posuere, sit amet tempus nisi viverra. Nunc interdum lorem non tempus lobortis. Integer porttitor egestas auctor.'>
+								</a>";
+		}
+
+
+		echo "		</ul>
+				</div>
+			</div>";
+            
+		}//while
+		
+	}
+
 
 
 	public function insertarNovedad($titulo,$descripcion,$imagen1,$imagen2,$imagen3,$imagen4,$imagen5,
@@ -268,6 +347,61 @@ class Novedad{
 
 	public function eliminarNovedad($id){
 		$bd=new BaseDatos();
+
+		$stmt=$bd->mysqli->prepare("SELECT img1,img2,img3,img4,img5,img6,img7,img8,img9,img10 
+										   FROM novedad
+										   WHERE ID=(?)");
+
+		$stmt->bind_param("i",$id);
+
+		$stmt->execute();
+
+		$resultado=$stmt->get_result();
+
+		$fila=$resultado->fetch_assoc();
+
+		if($fila['img1']!=''){
+			unlink("../uploads/".$fila['img1']."");
+		}
+
+		if($fila['img2']!=''){
+			unlink("../uploads/".$fila['img2']."");
+		}
+
+		if($fila['img3']!=''){
+			unlink("../uploads/".$fila['img3']."");
+		}
+
+		if($fila['img4']!=''){
+			unlink("../uploads/".$fila['img4']."");
+		}
+
+		if($fila['img5']!=''){
+			unlink("../uploads/".$fila['img5']."");
+		}
+
+		if($fila['img6']!=''){
+			unlink("../uploads/".$fila['img6']."");
+		}
+
+
+		if($fila['img7']!=''){
+			unlink("../uploads/".$fila['img7']."");
+		}
+
+		if($fila['img8']!=''){
+			unlink("../uploads/".$fila['img8']."");
+		}
+
+		if($fila['img9']!=''){
+			unlink("../uploads/".$fila['img9']."");
+		}
+
+		if($fila['img10']!=''){
+			unlink("../uploads/".$fila['img10']."");
+		}
+
+
 
 		$stmt=$bd->mysqli->prepare("DELETE 
 									FROM novedad

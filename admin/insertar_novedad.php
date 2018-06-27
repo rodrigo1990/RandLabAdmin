@@ -24,7 +24,7 @@ require("inc/verificarSession.php");
         <div class="col-lg-6 col-sm-6 margin">
           <div class="form-group">
             <label for="descripcion">Descripcion</label><br>
-        		<input type="text" name="descripcion" id="descripcion" class="form-control"> 
+        		<textarea  name="descripcion" id="descripcion" class="form-control"></textarea>
           </div>
         </div>
 

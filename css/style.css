@@ -291,10 +291,10 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focu
     font-size: 2.9rem;
     }
 
-    .cont ul.flex img{
+/*   .cont ul.flex img{
     width: 50px !important;
     height: 50px !important;
-}
+}*/
 
     .owl-theme .owl-nav {
     margin-top: 0px !important;
@@ -1852,10 +1852,10 @@ header {
         letter-spacing: 4px;
 }
 
-.cont ul.flex img{
+/*.cont ul.flex img{
     width: 100px;
     height: 100px;
-}
+}*/
 
 .cont ul.flex{
     display:flex;
