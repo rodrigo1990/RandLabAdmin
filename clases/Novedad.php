@@ -91,7 +91,7 @@ class Novedad{
 
 
 
-	public function insertarNovedad($titulo,$descripcion,$imagen1,$imagen2,$imagen3,$imagen4,$imagen5,
+	public function insertarNovedad($titulo,$descripcion,$fecha,$imagen1,$imagen2,$imagen3,$imagen4,$imagen5,
 									$imagen6,$imagen7,$imagen8,$imagen9,$imagen10){
 
 		$bd  = new BaseDatos();
@@ -191,10 +191,10 @@ class Novedad{
 				$imagen10 = "";
 			}
 			//INSERCION EN BD
-			$stmt=$bd->mysqli->prepare("INSERT INTO novedad(titulo,descripcion,img1,img2,img3,img4,img5,img6,img7,img8,img9,img10)
-		  		  						VALUES (?,?,?,?,?,?,?,?,?,?,?,?)");
+			$stmt=$bd->mysqli->prepare("INSERT INTO novedad(titulo,descripcion,fecha,img1,img2,img3,img4,img5,img6,img7,img8,img9,img10)
+		  		  						VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)");
 
-			$stmt->bind_param("ssssssssssss",$titulo,$descripcion,$imagen1,$imagen2,$imagen3,$imagen4,$imagen5,$imagen6,$imagen7,$imagen8,$imagen9,$imagen10);
+			$stmt->bind_param("sssssssssssss",$titulo,$descripcion,$fecha,$imagen1,$imagen2,$imagen3,$imagen4,$imagen5,$imagen6,$imagen7,$imagen8,$imagen9,$imagen10);
 			$stmt->execute();
 
 			echo "<h1 class='white-text'>El item ha <br> sido subido correctamente</h1>";
@@ -414,7 +414,7 @@ class Novedad{
 	}
 
 
-	public function actualizarNovedad($id,$titulo,$descripcion,$imagen1,$imagen2,$imagen3,$imagen4,$imagen5,$imagen6,$imagen7,$imagen8,$imagen9,$imagen10){
+	public function actualizarNovedad($id,$titulo,$descripcion,$fecha,$imagen1,$imagen2,$imagen3,$imagen4,$imagen5,$imagen6,$imagen7,$imagen8,$imagen9,$imagen10){
 		$bd=new BaseDatos();
 
 		try{
@@ -515,10 +515,10 @@ class Novedad{
 
 			//ACTUALIZACION EN BD
 			$stmt=$bd->mysqli->prepare("UPDATE novedad
-										  SET titulo=(?),descripcion=(?)
+										  SET titulo=(?),descripcion=(?),fecha=(?)
 										  WHERE ID=(?)");
 
-			$stmt->bind_param("ssi",$titulo,$descripcion,$id);
+			$stmt->bind_param("sssi",$titulo,$descripcion,$fecha,$id);
 			$stmt->execute();
 
 			
@@ -1029,6 +1029,28 @@ class Novedad{
 		$stmt->close();
 
 		echo  $fila['descripcion'];
+
+	}
+
+
+	public function listarFecha($id){
+
+		$bd = new BaseDatos();
+
+		$stmt=$bd->mysqli->prepare("SELECT fecha
+									  FROM novedad
+									  WHERE ID=(?)");
+		$stmt->bind_param("i",$id);
+
+		$stmt->execute();
+
+		$resultado=$stmt->get_result();
+
+		$fila=$resultado->fetch_assoc();
+
+		$stmt->close();
+
+		echo  $fila['fecha'];
 
 	}
 

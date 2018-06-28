@@ -16,15 +16,22 @@ require("inc/verificarSession.php");
         <div class="col-lg-6 col-sm-6 margin">
           <div class="form-group">
           	<label for="titulo">Ingrese un titulo</label><br>
-            <input type="text" name="titulo" class="form-control" id="titulo"> 
+            <input type="text" name="titulo" class="form-control" id="titulo" required> 
+          </div>
+        </div>
+
+        <div class="col-lg-6 col-sm-6 margin">
+          <div class="form-group">
+            <label for="fecha">Ingrese una fecha</label><br>
+            <input type="date" name="fecha" class="form-control" id="fecha" required> 
           </div>
         </div>
 
 
-        <div class="col-lg-6 col-sm-6 margin">
+        <div class="col-lg-12 col-sm-12 margin">
           <div class="form-group">
             <label for="descripcion">Descripcion</label><br>
-        		<textarea  name="descripcion" id="descripcion" class="form-control"></textarea>
+        		<textarea  name="descripcion" id="descripcion" class="form-control" rows="7" required></textarea>
           </div>
         </div>
 
@@ -164,7 +171,7 @@ require("inc/verificarSession.php");
             </div>
         </div>
           
-        <div class="row">
+        <div class="row padding-bottom">
           <div class="container">
             <div class="col-lg-6 col-sm-6">
 

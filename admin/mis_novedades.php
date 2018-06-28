@@ -47,7 +47,7 @@ require("inc/head.php");
 			</table>
 		</div>
 	</div>
-	<div class="row" style="margin-top:15%;">
+	<div class="row padding-bottom" style="margin-top:5%;">
 		<div class="container">
 			<div class="col-lg-6 col-sm-6">
               <a type="submit" class="btn btn-primary left submit-btn" href="home.php">Regresar a home</a>

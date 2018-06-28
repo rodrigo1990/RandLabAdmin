@@ -20,14 +20,21 @@ $nov = new Novedad();
       <div class="col-lg-6 col-sm-6">
         <div class="form-group">
       		<label for="titulo">Ingrese un titulo</label><br>
-          <input type="text" name="titulo" id="titulo" class="form-control" value="<?php $nov->listarTitulo($_GET['ID']) ?>"> <br><br>
+          <input type="text" name="titulo" id="titulo" class="form-control" value="<?php $nov->listarTitulo($_GET['ID']) ?>" required> <br><br>
         </div>
       </div>
 
-      <div class="col-lg-6 col-sm-6">
+      <div class="col-lg-6 col-sm-6 margin">
+          <div class="form-group">
+            <label for="fecha">Ingrese una fecha</label><br>
+            <input type="date" name="fecha" class="form-control" id="fecha" value="<?php  $nov->listarFecha($_GET['ID']) ?>" required> 
+          </div>
+        </div>
+
+      <div class="col-lg-12 col-sm-12">
         <div class="form-group">
           <label for="descripcion">Descripcion</label><br>
-      		<input type="text" name="descripcion" id="descripcion" class="form-control" value="<?php  $nov->listarDescripcion($_GET['ID']) ?>"> <br><br>
+      		<textarea name="descripcion" id="descripcion" rows="9" class="form-control" value="" required><?php  $nov->listarDescripcion($_GET['ID']) ?></textarea> <br><br>
         </div>
       </div>
  
@@ -238,7 +245,7 @@ $nov = new Novedad();
     <input type="hidden" value="<?php echo  $_GET['ID']?>" name="id">
 
 
-         <div class="row margin">
+         <div class="row margin padding-bottom">
           <div class="container">
             <div class="col-lg-6 col-sm-6">
 
