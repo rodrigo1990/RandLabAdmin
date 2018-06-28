@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 27-06-2018 a las 22:59:46
+-- Tiempo de generación: 28-06-2018 a las 18:30:07
 -- Versión del servidor: 10.1.30-MariaDB
 -- Versión de PHP: 5.6.33
 
@@ -39,7 +39,8 @@ CREATE TABLE `admin` (
 --
 
 INSERT INTO `admin` (`ID`, `usuario`, `pass`) VALUES
-(1, 'mcd77.1990@gmail.com', '62d20a3991d66bca46805d4bae46301e');
+(1, 'mcd77.1990@gmail.com', '62d20a3991d66bca46805d4bae46301e'),
+(2, 'admin@randlab.com.ar', '746026e5d61410d50c8c816f90eb4278');
 
 -- --------------------------------------------------------
 
@@ -71,7 +72,8 @@ CREATE TABLE `novedad` (
 INSERT INTO `novedad` (`ID`, `img1`, `img2`, `img3`, `img4`, `img5`, `img6`, `img7`, `img8`, `img9`, `img10`, `descripcion`, `titulo`, `fecha`) VALUES
 (10, '146087646.jpg', '540744018.jpg', '456726074.jpg', '228457641.jpg', '983135986.jpg', '260263061.jpg', '', '', '', '', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel viverra tortor. Quisque ut turpis auctor, sodales quam ultrices, ultrices felis. Maecenas viverra posuere risus ut gravida. Vestibulum cursus dui at quam molestie ullamcorper. Pellentesque convallis dolor in tempor mattis. Nunc porttitor finibus libero ut consequat. Nullam efficitur orci at pulvinar pharetra. Maecenas pulvinar venenatis turpis sit amet bibendum. Donec lacus est, iaculis a eleifend eget, consectetur eget felis. Maecenas rutrum erat id accumsan pulvinar. Suspendisse aliquam congue neque sit amet lobortis. Vivamus at mi metus.', 'novedad 1', '0000-00-00'),
 (11, '729983520.jpg', '918206787.jpg', '776730346.jpg', '754235839.jpg', '932022094.jpg', '946661376.jpg', '344802856.jpg', '535717773.jpg', '', '', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel viverra tortor. Quisque ut turpis auctor, sodales quam ultrices, ultrices felis. Maecenas viverra posuere risus ut gravida. Vestibulum cursus dui at quam molestie ullamcorper. Pellentesque convallis dolor in tempor mattis. Nunc porttitor finibus libero ut consequat. Nullam efficitur orci at pulvinar pharetra. Maecenas pulvinar venenatis turpis sit amet bibendum. Donec lacus est, iaculis a eleifend eget, consectetur eget felis. Maecenas rutrum erat id accumsan pulvinar. Suspendisse aliquam congue neque sit amet lobortis. Vivamus at mi metus.', 'novedad 2', '0000-00-00'),
-(12, '666592407.jpg', '270260620.jpg', '561535644.jpg', '814825439.jpg', '400640869.jpg', '105795288.jpg', '589413452.jpg', '740090942.jpg', '444915771.jpg', '713009643.jpg', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel viverra tortor. Quisque ut turpis auctor, sodales quam ultrices, ultrices felis. Maecenas viverra posuere risus ut gravida. Vestibulum cursus dui at quam molestie ullamcorper. Pellentesque convallis dolor in tempor mattis. Nunc porttitor finibus libero ut consequat. Nullam efficitur orci at pulvinar pharetra. Maecenas pulvinar venenatis turpis sit amet bibendum. Donec lacus est, iaculis a eleifend eget, consectetur eget felis. Maecenas rutrum erat id accumsan pulvinar. Suspendisse aliquam congue neque sit amet lobortis. Vivamus at mi metus.', 'novedad 3', '0000-00-00');
+(12, '666592407.jpg', '270260620.jpg', '561535644.jpg', '814825439.jpg', '400640869.jpg', '105795288.jpg', '589413452.jpg', '740090942.jpg', '444915771.jpg', '713009643.jpg', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel viverra tortor. Quisque ut turpis auctor, sodales quam ultrices, ultrices felis. Maecenas viverra posuere risus ut gravida. Vestibulum cursus dui at quam molestie ullamcorper. Pellentesque convallis dolor in tempor mattis. Nunc porttitor finibus libero ut consequat. Nullam efficitur orci at pulvinar pharetra. Maecenas pulvinar venenatis turpis sit amet bibendum. Donec lacus est, iaculis a eleifend eget, consectetur eget felis. Maecenas rutrum erat id accumsan pulvinar. Suspendisse aliquam congue neque sit amet lobortis. Vivamus at mi metus.', 'novedad 3', '0000-00-00'),
+(14, '994781494.jpg', '967123413.jpg', '975830078.jpg', '279544067.jpg', '', '', '', '', '', '', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean dictum malesuada aliquam. Cras ornare id diam vel laoreet. Nunc at sem id nisi pulvinar semper non a dui. Pellentesque sed sem cursus, mollis ante ut, pellentesque diam. Aliquam sed dui dapibus, facilisis magna id, dignissim justo. Suspendisse sagittis quam id arcu rutrum laoreet at in ipsum. Vivamus ut blandit mauris, ac imperdiet lacus. Donec aliquam suscipit leo in hendrerit. Quisque fringilla viverra risus a maximus. Nulla turpis risus, convallis feugiat eleifend ut, rutrum eu urna. Etiam a ex in felis maximus sollicitudin scelerisque non erat. Donec maximus nisi a nibh porta, quis euismod ipsum pharetra.', 'NOVEDAD 4', '1990-10-19');
 
 --
 -- Índices para tablas volcadas
@@ -97,13 +99,13 @@ ALTER TABLE `novedad`
 -- AUTO_INCREMENT de la tabla `admin`
 --
 ALTER TABLE `admin`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de la tabla `novedad`
 --
 ALTER TABLE `novedad`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

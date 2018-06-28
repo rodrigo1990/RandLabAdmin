@@ -31,7 +31,7 @@ require("inc/verificarSession.php");
         <div class="col-lg-12 col-sm-12 margin">
           <div class="form-group">
             <label for="descripcion">Descripcion</label><br>
-        		<textarea  name="descripcion" id="descripcion" class="form-control" rows="7" required></textarea>
+        		<textarea  name="descripcion" maxlength ="563" minlength="10" id="descripcion" class="form-control" rows="7" required title="De 1 a 563 caracteres"></textarea>
           </div>
         </div>
 

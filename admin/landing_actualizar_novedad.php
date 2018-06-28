@@ -16,6 +16,7 @@ $nov = new Novedad();
 					  $_POST['id'],	
 					  $_POST['titulo'],
 					  $_POST['descripcion'],
+					  $_POST['fecha'],
 					  $_FILES['imagen1']['name'],
 					  $_FILES['imagen2']['name'],
 					  $_FILES['imagen3']['name'],
