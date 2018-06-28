@@ -34,7 +34,7 @@ $nov = new Novedad();
       <div class="col-lg-12 col-sm-12">
         <div class="form-group">
           <label for="descripcion">Descripcion</label><br>
-      		<textarea name="descripcion" maxlength ="563" minlength="10" id="descripcion" rows="9" class="form-control" value="" required title="De 1 a 563 caracteres"><?php  $nov->listarDescripcion($_GET['ID']) ?></textarea> <br><br>
+      		<textarea name="descripcion" maxlength ="351" minlength="10" id="descripcion" rows="9" class="form-control" value="" required title="De 1 a 563 caracteres"><?php  $nov->listarDescripcion($_GET['ID']) ?></textarea> <br><br>
         </div>
       </div>
  
