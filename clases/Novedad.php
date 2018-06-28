@@ -27,56 +27,56 @@ class Novedad{
 					<div class='container'>
 						<h1>".$fila['titulo']."</h1>
 						<h4>".date("d/m/Y",strtotime($fila['fecha']))."</h4>	
-						<p>".$fila['descripcion']."</p>
-						<ul class='flex'>
-							<a data-fancybox='gallery".$i."' href='uploads/".$fila['img1']."' data-caption='Quisque accumsan ut lorem in commodo. Vivamus dolor lacus, tempus quis ex eget, elementum ullamcorper purus. Duis dictum velit eu ante posuere, sit amet tempus nisi viverra. Nunc interdum lorem non tempus lobortis. Integer porttitor egestas auctor.'>
+						<p style='overflow:hidden;'>".$fila['descripcion']."</p>
+						<ul class='flex' style='overflow:hidden;'>
+							<a data-fancybox='gallery".$i."' href='uploads/".$fila['img1']."' data-caption='".$fila['descripcion']."'>
 							GALERIA DE IMAGENES
 							</a>";
 
 		if($fila["img2"]!=""){
 
-			echo "<a  style='display:none'data-fancybox='gallery".$i."' href='uploads/".$fila['img2']."' data-caption='Quisque accumsan ut lorem in commodo. Vivamus dolor lacus, tempus quis ex eget, elementum ullamcorper purus. Duis dictum velit eu ante posuere, sit amet tempus nisi viverra. Nunc interdum lorem non tempus lobortis. Integer porttitor egestas auctor.'>
+			echo "<a  style='display:none'data-fancybox='gallery".$i."' href='uploads/".$fila['img2']."' data-caption='".$fila['descripcion']."'>
 								</a>";
 
 		}
 
 		if($fila["img3"]!=""){
-			echo "<a  style='display:none'data-fancybox='gallery".$i."' href='uploads/".$fila['img3']."' data-caption='Quisque accumsan ut lorem in commodo. Vivamus dolor lacus, tempus quis ex eget, elementum ullamcorper purus. Duis dictum velit eu ante posuere, sit amet tempus nisi viverra. Nunc interdum lorem non tempus lobortis. Integer porttitor egestas auctor.' >
+			echo "<a  style='display:none'data-fancybox='gallery".$i."' href='uploads/".$fila['img3']."' data-caption='".$fila['descripcion']."' >
 								</a>";
 		}
 
 		if($fila["img4"]!=""){
-			echo "<a  style='display:none'data-fancybox='gallery".$i."' href='uploads/".$fila['img4']."' data-caption='Quisque accumsan ut lorem in commodo. Vivamus dolor lacus, tempus quis ex eget, elementum ullamcorper purus. Duis dictum velit eu ante posuere, sit amet tempus nisi viverra. Nunc interdum lorem non tempus lobortis. Integer porttitor egestas auctor.'>
+			echo "<a  style='display:none'data-fancybox='gallery".$i."' href='uploads/".$fila['img4']."' data-caption='".$fila['descripcion']."'>
 								</a>";
 		}
 
 		if($fila["img5"]!=""){
-			echo "<a  style='display:none'data-fancybox='gallery".$i."' href='uploads/".$fila['img5']."' data-caption='Quisque accumsan ut lorem in commodo. Vivamus dolor lacus, tempus quis ex eget, elementum ullamcorper purus. Duis dictum velit eu ante posuere, sit amet tempus nisi viverra. Nunc interdum lorem non tempus lobortis. Integer porttitor egestas auctor.'>
+			echo "<a  style='display:none'data-fancybox='gallery".$i."' href='uploads/".$fila['img5']."' data-caption='".$fila['descripcion']."'>
 								</a>";
 		}
 
 		if($fila["img6"]!=""){
-			echo "<a  style='display:none'data-fancybox='gallery".$i."' href='uploads/".$fila['img6']."' data-caption='Quisque accumsan ut lorem in commodo. Vivamus dolor lacus, tempus quis ex eget, elementum ullamcorper purus. Duis dictum velit eu ante posuere, sit amet tempus nisi viverra. Nunc interdum lorem non tempus lobortis. Integer porttitor egestas auctor.'>
+			echo "<a  style='display:none'data-fancybox='gallery".$i."' href='uploads/".$fila['img6']."' data-caption='".$fila['descripcion']."'>
 								</a>";
 		}
 
 		if($fila["img7"]!=""){
-			echo "<a  style='display:none'data-fancybox='gallery".$i."' href='uploads/".$fila['img7']."' data-caption='Quisque accumsan ut lorem in commodo. Vivamus dolor lacus, tempus quis ex eget, elementum ullamcorper purus. Duis dictum velit eu ante posuere, sit amet tempus nisi viverra. Nunc interdum lorem non tempus lobortis. Integer porttitor egestas auctor.'>
+			echo "<a  style='display:none'data-fancybox='gallery".$i."' href='uploads/".$fila['img7']."' data-caption='".$fila['descripcion']."'>
 								</a>";
 		}
 
 		if($fila["img8"]!=""){
-			echo "<a  style='display:none'data-fancybox='gallery".$i."' href='uploads/".$fila['img8']."' data-caption='Quisque accumsan ut lorem in commodo. Vivamus dolor lacus, tempus quis ex eget, elementum ullamcorper purus. Duis dictum velit eu ante posuere, sit amet tempus nisi viverra. Nunc interdum lorem non tempus lobortis. Integer porttitor egestas auctor.'>
+			echo "<a  style='display:none'data-fancybox='gallery".$i."' href='uploads/".$fila['img8']."' data-caption='".$fila['descripcion']."'>
 								</a>";
 		}
 
 		if($fila["img9"]!=""){
-			echo "<a  style='display:none'data-fancybox='gallery".$i."' href='uploads/".$fila['img9']."' data-caption='Quisque accumsan ut lorem in commodo. Vivamus dolor lacus, tempus quis ex eget, elementum ullamcorper purus. Duis dictum velit eu ante posuere, sit amet tempus nisi viverra. Nunc interdum lorem non tempus lobortis. Integer porttitor egestas auctor.'>
+			echo "<a  style='display:none'data-fancybox='gallery".$i."' href='uploads/".$fila['img9']."' data-caption='".$fila['descripcion']."'>
 								</a>";
 		}
 
 		if($fila["img10"]!=""){
-			echo "<a  style='display:none'data-fancybox='gallery".$i."' href='uploads/".$fila['img10']."' data-caption='Quisque accumsan ut lorem in commodo. Vivamus dolor lacus, tempus quis ex eget, elementum ullamcorper purus. Duis dictum velit eu ante posuere, sit amet tempus nisi viverra. Nunc interdum lorem non tempus lobortis. Integer porttitor egestas auctor.'>
+			echo "<a  style='display:none'data-fancybox='gallery".$i."' href='uploads/".$fila['img10']."' data-caption='".$fila['descripcion']."'>
 								</a>";
 		}
 
@@ -327,7 +327,7 @@ class Novedad{
 				echo "<tr>
 						<td>".$fila['ID']."</td>
 						<td>".$fila['titulo']."</td>
-						<td>".$fila['descripcion']."</td>						
+						<td style='overflow:hidden;'><p style='overflow:hidden;'>".$fila['descripcion']."</p></td>						
 						<td>
 							<a href='eliminar_novedad.php?ID=".$fila['ID']."'>Eliminar</a>
 						</td>
