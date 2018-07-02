@@ -694,7 +694,7 @@ header {
 .about {
     position: relative;
     text-align: center;
-    /*padding: 40px 20px ;*/
+    padding: 40px 20px;
     border: 1px solid #EEE;
     margin: 15px 0px;
     
